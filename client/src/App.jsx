@@ -28,34 +28,32 @@ function App() {
       <BrowserRouter>
       <Box style={{ marginTop: 64}}>
       <Header />
-        <Routes>
-        <Route path='/account' element={<Login isUserAuthenticated={isUserAuthenticated} />} />
-            
-            {/* <Route path='/' element={<PrivateRoute isAuthenticated={isAuthenticated} />} > */}
+      <Routes>
+            <Route path='/account' element={<Login isUserAuthenticated={isUserAuthenticated} />} />
+{/*             
+            <Route path='/' element={<PrivateRoute isAuthenticated={isAuthenticated} />} > */}
               <Route path='/' element={<Home />} />
             {/* </Route> */}
 
-            {/* <Route path='/create' element={<PrivateRoute isAuthenticated={isAuthenticated} />} > */}
+            <Route path='/create' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
               <Route path='/create' element={<CreatePost />} />
-            {/* </Route> */}
-{/* 
-            <Route path='/details/:id' element={<PrivateRoute isAuthenticated={isAuthenticated} />} > */}
+            </Route>
+
+            <Route path='/details/:id' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
               <Route path='/details/:id' element={<DetailView />} />
-            {/* </Route> */}
+            </Route>
 
             <Route path='/update/:id' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
               <Route path='/update/:id' element={<Update />} />
             </Route>
 
-            {/* <Route path='/about' element={<PrivateRoute isAuthenticated={isAuthenticated} />} > */}
               <Route path='/about' element={<About />} />
-            {/* </Route> */}
-{/* 
-            <Route path='/contact' element={<PrivateRoute isAuthenticated={isAuthenticated} />} > */}
+           
+
+            {/* <Route path='/contact' element={<PrivateRoute isAuthenticated={isAuthenticated} />} > */}
               <Route path='/contact' element={<Contact />} />
             {/* </Route> */}
-        </Routes>
-
+          </Routes>
       </Box>
       </BrowserRouter>
     </DataProvider>
