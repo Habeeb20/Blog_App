@@ -25,6 +25,14 @@ app.use(bodyParser.json({extended: true}))
 app.use(cookieParser());
 app.use('/', router);
 
+app.use(express.static(path.join(__dirname, '/client/dist')))
+
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'))
+})
+
+
 mongoose.connection.once('open', () => {
     console.log("connected")
     app.listen(port, () => console.log(`server is listening on port ${port}`))
