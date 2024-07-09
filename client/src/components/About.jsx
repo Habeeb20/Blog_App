@@ -26,7 +26,7 @@ const About = () => {
         <Box>
             <Banner>
                 <Wrapper>
-                <Typography variant="h3">Code for Interview</Typography>
+                <Typography variant="h3">Blog</Typography>
                 <Text variant="h5">I'm a Software Developer based in Nigeria. 
                     I've built websites, 
                     If you are interested and want to view some of my projects, let me know
