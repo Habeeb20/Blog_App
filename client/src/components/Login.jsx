@@ -118,7 +118,7 @@ const Login = ({isUserAuthenticated}) => {
         let response = await API.userSignup(signup);
         if (response.isSuccess) {
             showError('');
-            setSignup(signupInitialValues);
+            setSignup(signupIntialValues );
             toggleAccount('login');
         } else {
             showError('Something went wrong! please try again later');
